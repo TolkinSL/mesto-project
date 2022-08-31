@@ -13,4 +13,4 @@
 * Методология БЭМ
 * Файловая структура Nested
 
-Ссылка [на проект]() в Github Pages
+Ссылка [на проект](https://tolkinsl.github.io/mesto-project/) в Github Pages
