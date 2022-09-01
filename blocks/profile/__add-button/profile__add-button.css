@@ -27,5 +27,6 @@
     width: 282px;
     grid-column: 1;
     grid-row: 3;
+    background-size: 16px 16px;
   }
 }
