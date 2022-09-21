@@ -1,0 +1,22 @@
+.popup-edit__item {
+  box-sizing: border-box;
+  margin-top: 50px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  outline: none;
+  padding-bottom: 7px;
+}
+
+.popup-edit__item:last-child {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .popup-edit__item {
+    margin-top: 75px;
+  }
+}

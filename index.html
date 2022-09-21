@@ -69,20 +69,35 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-    <div class="popup">
-      <div class="popup__container">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="popup-edit">
-            <fieldset class="popup__items">
-              <input class="popup__item" type="text" name="edit-name" id="edit-name" value="Жак-Ив Кусто">
-              <input class="popup__item" type="text" name="edit-info" id="edit-info" value="Исследователь океана">
-            </fieldset>
-            <button class="popup__save-button" type="submit">Сохранить</button>
-          </form>
-          <button class="popup__close-button" type="button"></button>
 
+    <div class="popup-profile">
+      <div class="popup-profile__container">
+        <h2 class="popup-profile__title">Редактировать профиль</h2>
+        <form class="popup-profile__form" name="popup-edit">
+            <fieldset class="popup-profile__items">
+              <input class="popup-profile__item" type="text" name="edit-name" id="edit-name" value="Жак-Ив Кусто">
+              <input class="popup-profile__item" type="text" name="edit-info" id="edit-info" value="Исследователь океана">
+            </fieldset>
+            <button class="popup-profile__save-button" type="submit">Сохранить</button>
+          </form>
+          <button class="popup-profile__close-button" type="button"></button>
       </div>
     </div>
+
+    <div class="popup-edit">
+      <div class="popup-edit__container">
+        <h2 class="popup-edit__title">Новое место</h2>
+        <form class="popup-edit__form" name="popup-edit">
+            <fieldset class="popup-edit__items">
+              <input class="popup-edit__item" type="text" name="edit-name" id="edit-name" value="Название">
+              <input class="popup-edit__item" type="text" name="edit-info" id="edit-info" value="Ссылка на картинку">
+            </fieldset>
+            <button class="popup-edit__save-button" type="submit">Создать</button>
+          </form>
+          <button class="popup-edit__close-button" type="button"></button>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
