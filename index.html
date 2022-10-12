@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Место</title>
   <link rel="stylesheet" href="./pages/index.css">
+  <script src="./data.js" defer></script>
+  <script src="./index.js" defer></script>
 </head>
 <body class="body">
   <div class="page">
@@ -19,51 +21,18 @@
           <button class="profile__edit-button" type="button"></button>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__addcard-button" type="button"></button>
       </section>
       <section class="elements" aria-label="Photocard">
-        <article class="element">
+        <!-- <article class="element">
           <img class="element__image" src="./images/1p-karachaevsk.jpg" alt="Карачаевск">
+          <button class="element__trash-button" type="button"></button>
           <div class="element__item">
             <h2 class="element__title">Карачаевск</h2>
             <button class="element__like-button" type="button"></button>
           </div>
-        </article>
-        <article class="element">
-          <img class="element__image" src="./images/2p-elbrus.png" alt="Эльбрус">
-          <div class="element__item">
-            <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img class="element__image" src="./images/3p-dombay.jpg" alt="Домбай">
-          <div class="element__item">
-            <h2 class="element__title">Домбай</h2>
-            <button class="element__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img class="element__image" src="./images/2p-elbrus.png" alt="Эльбрус">
-          <div class="element__item">
-            <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img class="element__image" src="./images/3p-dombay.jpg" alt="Домбай">
-          <div class="element__item">
-            <h2 class="element__title">Домбай</h2>
-            <button class="element__like-button" type="button"></button>
-          </div>
-        </article>
-        <article class="element">
-          <img class="element__image" src="./images/1p-karachaevsk.jpg" alt="Карачаевск">
-          <div class="element__item">
-            <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button class="element__like-button" type="button"></button>
-          </div>
-        </article>
+        </article> -->
+
       </section>
     </main>
     <footer class="footer">
@@ -84,20 +53,38 @@
       </div>
     </div>
 
-    <div class="popup-edit">
-      <div class="popup-edit__container">
-        <h2 class="popup-edit__title">Новое место</h2>
-        <form class="popup-edit__form" name="popup-edit">
-            <fieldset class="popup-edit__items">
-              <input class="popup-edit__item" type="text" name="edit-name" id="edit-name" value="Название">
-              <input class="popup-edit__item" type="text" name="edit-info" id="edit-info" value="Ссылка на картинку">
+    <div class="popup-addcard">
+      <div class="popup-addcard__container">
+        <h2 class="popup-addcard__title">Новое место</h2>
+        <form class="popup-addcard__form" name="popup-edit">
+            <fieldset class="popup-addcard__items">
+              <input class="popup-addcard__item" type="text" name="edit-name" id="edit-name" value="Название">
+              <input class="popup-addcard__item" type="text" name="edit-info" id="edit-info" value="Ссылка на картинку">
             </fieldset>
-            <button class="popup-edit__save-button" type="submit">Создать</button>
+            <button class="popup-addcard__save-button" type="submit">Создать</button>
           </form>
-          <button class="popup-edit__close-button" type="button"></button>
+          <button class="popup-addcard__close-button" type="button"></button>
       </div>
     </div>
 
+    <div class="popup-image">
+      <div class="popup-image__container">
+        <img class="popup-image__foto" src="./images/3p-dombay.jpg" alt="Домбай" />
+        <figcaption class="popup-image__caption">ваша полка — верхняя</figcaption>
+        <button class="popup-image__close-button" type="button"></button>
+      </div>
+    </div>
+
+    <template id="element-template">
+      <article class="element">
+        <img class="element__image" src="./images/1p-karachaevsk.jpg" alt="Карачаевск">
+        <button class="element__trash-button" type="button"></button>
+        <div class="element__item">
+          <h2 class="element__title">Карачаевск</h2>
+          <button class="element__like-button" type="button"></button>
+        </div>
+      </article>
+    </template>
   </div>
 </body>
 </html>

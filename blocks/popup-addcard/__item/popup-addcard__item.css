@@ -1,4 +1,4 @@
-.popup-edit__item {
+.popup-addcard__item {
   box-sizing: border-box;
   margin-top: 50px;
   width: 100%;
@@ -11,12 +11,12 @@
   padding-bottom: 7px;
 }
 
-.popup-edit__item:last-child {
+.popup-addcard__item:last-child {
   margin-top: 30px;
 }
 
 @media screen and (max-width: 767px) {
-  .popup-edit__item {
+  .popup-addcard__item {
     margin-top: 75px;
   }
 }
