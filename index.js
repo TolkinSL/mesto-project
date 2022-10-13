@@ -3,43 +3,14 @@ const openProfileBtn = document.querySelector('.profile__edit-button');
 const openProfilePopup = document.querySelector('.popup-profile');
 const closeProfileBtn = document.querySelector('.popup-profile__close-button');
 
-//Открытие окна Профайл
-openProfileBtn.addEventListener('click', function() {
-  openProfilePopup.classList.add('popup-profile_opened');
-  editName.value = profileTitle.textContent;
-  editInfo.value = profileSubtitle.textContent;
-}
-);
-//Закрытие окна Профайл
-closeProfileBtn.addEventListener('click', function() {
-  openProfilePopup.classList.remove('popup-profile_opened');
-}
-);
-
 //Переменные окна Добавление карточек
 const openAddcardBtn = document.querySelector('.profile__addcard-button');
 const openAddcardPopup = document.querySelector('.popup-addcard');
 const closeAddcardBtn = document.querySelector('.popup-addcard__close-button');
-//Открытие окна Добавление карточек
-openAddcardBtn.addEventListener('click', function() {
-  openAddcardPopup.classList.add('popup-addcard_opened');
-}
-);
-//Закрытие окна Добавление карточек
-closeAddcardBtn.addEventListener('click', function() {
-  openAddcardPopup.classList.remove('popup-addcard_opened');
-}
-);
 
 //Переменные окна Картинка
 const openImagePopup = document.querySelector('.popup-image');
 const closeImageBtn = document.querySelector('.popup-image__close-button');
-
-//Закрытие окна Картинка
-closeImageBtn.addEventListener('click', function() {
-  openImagePopup.classList.remove('popup-image_opened');
-}
-);
 
 //Переменные редактирования Профайл
 const profileForm = document.querySelector('.popup-profile__form');
@@ -47,6 +18,39 @@ const editName = document.querySelector('#edit-name');
 const editInfo = document.querySelector('#edit-info');
 const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
+
+//Переменные для Создание карточек из Темплейта
+const elementList = document.querySelector('.elements');
+
+//Переменные добавления Новой фото карточки
+const addCardForm = document.querySelector('.popup-addcard__form');
+const cardName = document.querySelector('#card-name');
+const cardLink = document.querySelector('#card-link');
+
+//Открытие окна Профайл
+openProfileBtn.addEventListener('click', function() {
+  openProfilePopup.classList.add('popup-profile_opened');
+  editName.value = profileTitle.textContent;
+  editInfo.value = profileSubtitle.textContent;
+});
+//Закрытие окна Профайл
+closeProfileBtn.addEventListener('click', function() {
+  openProfilePopup.classList.remove('popup-profile_opened');
+});
+
+//Открытие окна Добавление карточек
+openAddcardBtn.addEventListener('click', function() {
+  openAddcardPopup.classList.add('popup-addcard_opened');
+});
+//Закрытие окна Добавление карточек
+closeAddcardBtn.addEventListener('click', function() {
+  openAddcardPopup.classList.remove('popup-addcard_opened');
+});
+
+//Закрытие окна Картинка
+closeImageBtn.addEventListener('click', function() {
+  openImagePopup.classList.remove('popup-image_opened');
+});
 
 //Функция редактирования Профайл
 function changeProfile (evt) {
@@ -58,8 +62,6 @@ function changeProfile (evt) {
 
 profileForm.addEventListener('submit',changeProfile);
 
-//Переменные для Создание карточек из Темплейта
-const elementList = document.querySelector('.elements');
 //Функция Создание карточек из Темплейта
 function createElement(imageValue,titleValue) {
   const elementTemplate = document.querySelector('#element-template').content;
@@ -98,11 +100,6 @@ function createElement(imageValue,titleValue) {
 initialCards.forEach(function (data) {
   elementList.prepend(createElement(data.link,data.name));
 });
-
-//Переменные добавления Новой фото карточки
-const addCardForm = document.querySelector('.popup-addcard__form');
-const cardName = document.querySelector('#card-name');
-const cardLink = document.querySelector('#card-link');
 
 //Функция добавления Новой фото карточки
 function addNewCard (evt) {
