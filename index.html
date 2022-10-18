@@ -24,54 +24,41 @@
         <button class="profile__addcard-button" type="button"></button>
       </section>
       <section class="elements" aria-label="Photocard">
-        <!-- <article class="element">
-          <img class="element__image" src="./images/1p-karachaevsk.jpg" alt="Карачаевск">
-          <button class="element__trash-button" type="button"></button>
-          <div class="element__item">
-            <h2 class="element__title">Карачаевск</h2>
-            <button class="element__like-button" type="button"></button>
-          </div>
-        </article> -->
-
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup-profile">
-      <div class="popup-profile__container">
-        <h2 class="popup-profile__title">Редактировать профиль</h2>
-        <form class="popup-profile__form" name="popup-edit">
-            <fieldset class="popup-profile__items">
-              <input class="popup-profile__item" type="text" name="edit-name" id="edit-name" value="Жак-Ив Кусто">
-              <input class="popup-profile__item" type="text" name="edit-info" id="edit-info" value="Исследователь океана">
-            </fieldset>
-            <button class="popup-profile__save-button" type="submit">Сохранить</button>
-          </form>
-          <button class="popup-profile__close-button" type="button"></button>
+    <div class="popup popup_profile">
+      <div class="popup__container">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form-profile" name="popup-edit">
+          <input class="popup__item" type="text" name="edit-name" id="edit-name" value="" placeholder="Имя">
+          <input class="popup__item" type="text" name="edit-info" id="edit-info" value="" placeholder="О себе">
+          <button class="popup__save-button" type="submit">Сохранить</button>
+        </form>
+        <button class="popup__close-button" type="button" id="profile-cls-btn"></button>
       </div>
     </div>
 
-    <div class="popup-addcard">
-      <div class="popup-addcard__container">
-        <h2 class="popup-addcard__title">Новое место</h2>
-        <form class="popup-addcard__form" name="popup-add">
-            <fieldset class="popup-addcard__items">
-              <input class="popup-addcard__item" type="text" name="card-name" id="card-name" placeholder="Название">
-              <input class="popup-addcard__item" type="text" name="card-link" id="card-link" placeholder="Ссылка на картинку">
-            </fieldset>
-            <button class="popup-addcard__save-button" type="submit">Создать</button>
-          </form>
-          <button class="popup-addcard__close-button" type="button"></button>
+    <div class="popup popup_addcard">
+      <div class="popup__container">
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form-addcard" name="popup-add">
+          <input class="popup__item" type="text" name="card-name" id="card-name" placeholder="Название">
+          <input class="popup__item" type="text" name="card-link" id="card-link" placeholder="Ссылка на картинку">
+          <button class="popup__save-button" type="submit">Создать</button>
+        </form>
+        <button class="popup__close-button" type="button" id="addcard-cls-btn"></button>
       </div>
     </div>
 
-    <div class="popup-image">
-      <div class="popup-image__container">
-        <img class="popup-image__foto" src="" alt="Фото" />
-        <figcaption class="popup-image__caption"></figcaption>
-        <button class="popup-image__close-button" type="button"></button>
+    <div class="popup popup_image">
+      <div class="popup__container-image">
+        <img class="popup__image-foto" src="" alt="Фото" />
+        <figcaption class="popup__image-caption"></figcaption>
+        <button class="popup__close-button" type="button" id="image-cls-btn"></button>
       </div>
     </div>
 
