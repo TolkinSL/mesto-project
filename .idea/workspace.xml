@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fab2ebc3-d538-44d3-b756-35eee0eed99c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" afterDir="false" />
+    <list default="true" id="986416f7-614a-468f-bd8a-335ff85e9c55" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__image/element__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__image/element__image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup-image/__foto/popup-image__foto.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup-image/__foto/popup-image__foto.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/body/body.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__image/element__image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__item/element__item.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__like-button/_active/element__like-button_active.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__like-button/element__like-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__title/element__title.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__trash-button/element__trash-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/element.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/__copyright/footer__copyright.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/page/page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container-image/popup__container-image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__image-caption/popup__image-caption.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__image-foto/popup__image-foto.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__item/popup__item.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_image/popup_image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__addcard-button/profile__addcard-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__info/profile__info.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__subtitle/profile__subtitle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__title/profile__title.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Inter-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Inter-Black.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Inter-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Inter-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Inter-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/Inter-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1p-karachaevsk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2p-elbrus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3p-dombay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/add-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/close-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/edit-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ivcusto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/like-active-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/like-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mesto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mesto.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/trash-button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +78,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2G446y4xhDvbzMlEVsrM8MyeKCM" />
+  <component name="ProjectId" id="2K68eJaHHi8fEwmRVsuOAkw792w" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,43 +88,27 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Yandex/mesto-project/blocks/popup/_opened",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Yandex\mesto-project\blocks\popup\_opened" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fab2ebc3-d538-44d3-b756-35eee0eed99c" name="Changes" comment="" />
-      <created>1665634350180</created>
+      <changelist id="986416f7-614a-468f-bd8a-335ff85e9c55" name="Changes" comment="" />
+      <created>1673283766202</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1665634350180</updated>
-      <workItem from="1665634351477" duration="116000" />
-      <workItem from="1666048478011" duration="9000" />
-      <workItem from="1666049391061" duration="1459000" />
-      <workItem from="1666050898994" duration="10051000" />
+      <updated>1673283766202</updated>
+      <workItem from="1673283769041" duration="2638000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
