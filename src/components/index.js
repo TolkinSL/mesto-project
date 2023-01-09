@@ -1,20 +1,16 @@
 import '../pages/index.css';
-import {initialCards} from './data.js';
-import {enableValidation} from './validate.js';
+import {initialCards, validSetting} from './data.js';
+import {enableValidation, disableSubmitBtn} from './validate.js';
 import {addNewCard, createElement, cardFormAdd, elementsContainer, imagePopup} from './card.js';
 import {openPopup, closePopup, cardPopup} from './modal.js';
 
 //Переменные окна Профайл
 const profileBtnOpen = document.querySelector('.profile__edit-button');
 const profilePopup = document.querySelector('.popup_profile');
-const profileBtnClose = document.querySelector('#profile-cls-btn');
 
 //Переменные окна Добавление карточек
 const cardBtnOpen = document.querySelector('.profile__addcard-button');
-const cardBtnClose = document.querySelector('#addcard-cls-btn');
-
-//Переменные окна Картинка
-const imageBtnClose = document.querySelector('#image-cls-btn');
+const submitBtn = document.querySelector('#submitAddBtn');
 
 //Переменные редактирования Профайл
 const profileForm = document.querySelector('.popup__form-profile');
@@ -23,6 +19,18 @@ const infoEdit = document.querySelector('#editInfo');
 const profileTitle = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
 
+//Переменные находим все крестики (X) проекта по универсальному селектору
+const closeButtons = document.querySelectorAll('.popup__close-button');
+
+
+//Функция закрытия всех Popup через (Х)
+closeButtons.forEach((button) => {
+  // находим 1 раз ближайший к крестику попап
+  const popup = button.closest('.popup');
+  // устанавливаем обработчик закрытия на крестик
+  button.addEventListener('click', () => closePopup(popup));
+});
+
 //Открытие окна Профайл
 profileBtnOpen.addEventListener('click', function() {
   openPopup(profilePopup);
@@ -30,24 +38,10 @@ profileBtnOpen.addEventListener('click', function() {
   infoEdit.value = profileSubtitle.textContent;
 });
 
-//Закрытие окна Профайл
-profileBtnClose.addEventListener('click', function() {
-  closePopup(profilePopup);
-});
-
 //Открытие окна Добавление карточек
 cardBtnOpen.addEventListener('click', function() {
   openPopup(cardPopup);
-});
-
-//Закрытие окна Добавление карточек
-cardBtnClose.addEventListener('click', function() {
-  closePopup(cardPopup);
-});
-
-//Закрытие окна Картинка
-imageBtnClose.addEventListener('click', function() {
-  closePopup(imagePopup);
+  disableSubmitBtn(validSetting, submitBtn);
 });
 
 //Функция редактирования Профайл
@@ -67,11 +61,4 @@ initialCards.forEach(function (data) {
 
 cardFormAdd.addEventListener('submit',addNewCard);
 
-enableValidation({
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button',
-  inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error_visible'
-});
+enableValidation(validSetting);

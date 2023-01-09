@@ -10,7 +10,7 @@ function closeEsc(evt) {
 //Функция закрытия Popup мышкой
 function closeMouse(evt) {
   if (evt.target.classList.contains("popup")) {
-    closePopup(document.querySelector(".popup_opened"));
+    closePopup(evt.target);
   }
 }
 
