@@ -3,10 +3,16 @@ import {initialCards, validSetting} from './data.js';
 import {enableValidation, disableSubmitBtn} from './validate.js';
 import {addNewCard, createElement, cardFormAdd, elementsContainer, imagePopup} from './card.js';
 import {openPopup, closePopup, cardPopup} from './modal.js';
+import {getSrvUser, getSrvCards, editProfile, changeAvatar } from "./api.js";
 
 //Переменные окна Профайл
 const profileBtnOpen = document.querySelector('.profile__edit-button');
 const profilePopup = document.querySelector('.popup_profile');
+
+//Переменные окна Avatar
+const avatarPopup = document.querySelector('.popup_avatar');
+const avatarForm = document.querySelector('.popup__form-avatar');
+const inputPhoto = avatarForm.querySelector(".popup__input");
 
 //Переменные окна Добавление карточек
 const cardBtnOpen = document.querySelector('.profile__addcard-button');
@@ -22,7 +28,72 @@ const profileSubtitle = document.querySelector('.profile__subtitle');
 //Переменные находим все крестики (X) проекта по универсальному селектору
 const closeButtons = document.querySelectorAll('.popup__close-button');
 
+//Данные пользователя
+export let user = {};
 
+//Iulya constnt
+const profileAvatar = document.querySelector('.profile__avatar');
+const profileButton = profileForm.querySelector('.popup__button');
+const avatarButton = avatarForm.querySelector('.popup__button');
+
+//Функция Загрузки данных и карточек с сервера
+Promise.all([getSrvUser(), getSrvCards()])
+  .then(([srvUser, cards]) => {
+    user = srvUser;
+    profileTitle.textContent = user.name;
+    profileSubtitle.textContent = user.about;
+    profileAvatar.src = user.avatar;
+
+    cards.reverse().forEach((data) => {
+      elementsContainer.prepend(createElement(data));
+    })
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+
+//Функция редактирования Профайл
+function changeProfile (evt) {
+  evt.preventDefault();
+  profileButton.textContent = 'Сохранение...';
+  editProfile(nameEdit.value, infoEdit.value)
+    .then(() => {
+      profileTitle.textContent = nameEdit.value;
+      profileSubtitle.textContent = infoEdit.value;
+      closePopup(profilePopup);
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+    .finally(() => {
+      profileButton.textContent = 'Сохранить';
+    });
+
+}
+profileForm.addEventListener('submit',changeProfile);
+
+//функция изменения аватарки пользователя
+function changeAvatarProfile(evt) {
+  evt.preventDefault();
+  avatarButton.textContent = 'Сохранение...';
+  const avatar = inputPhoto.value;
+  changeAvatar(avatar)
+    .then((item) => {
+      profileAvatar.src = item.avatar;
+      closePopup(avatarPopup);
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+    .finally(() => {
+      avatarButton.textContent = 'Сохранить';
+    })
+}
+
+//слушатель на кнопку в форме изменения аватара
+avatarForm.addEventListener('submit', changeAvatarProfile);
+
+//-------------------------------------------------------------------
 //Функция закрытия всех Popup через (Х)
 closeButtons.forEach((button) => {
   // находим 1 раз ближайший к крестику попап
@@ -38,25 +109,15 @@ profileBtnOpen.addEventListener('click', function() {
   infoEdit.value = profileSubtitle.textContent;
 });
 
+//Открытие окна Avatar
+profileAvatar.addEventListener('click', function() {
+  openPopup(avatarPopup);
+});
+
 //Открытие окна Добавление карточек
 cardBtnOpen.addEventListener('click', function() {
   openPopup(cardPopup);
   disableSubmitBtn(validSetting, submitBtn);
-});
-
-//Функция редактирования Профайл
-function changeProfile (evt) {
-  evt.preventDefault();
-  profileTitle.textContent = nameEdit.value;
-  profileSubtitle.textContent = infoEdit.value;
-  closePopup(profilePopup);
-}
-
-profileForm.addEventListener('submit',changeProfile);
-
-//Создание карточек из массива initialCards
-initialCards.forEach(function (data) {
-  elementsContainer.prepend(createElement(data.link,data.name));
 });
 
 cardFormAdd.addEventListener('submit',addNewCard);

@@ -12,11 +12,14 @@
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__avatar" src="<%=require('./images/ivcusto.jpg')%>" alt="Аватар">
+        <div class="profile__avatar-edit">
+          <img class="profile__avatar-pen" src="<%=require('./images/pen.svg')%>" alt="Карандаш">
+          <img class="profile__avatar" src="" alt="Аватар">
+        </div>
         <div class="profile__info">
-          <h1 class="profile__title">Жак-Ив Кусто</h1>
+          <h1 class="profile__title"></h1>
           <button class="profile__edit-button" type="button"></button>
-          <p class="profile__subtitle">Исследователь океана</p>
+          <p class="profile__subtitle"></p>
         </div>
         <button class="profile__addcard-button" type="button"></button>
       </section>
@@ -53,7 +56,7 @@
                  minlength="2" maxlength="30" pattern="^[a-zA-Zа-яА-яёЁ\s\-]+$" required
                  data-error-message="Поле должно содержать только латинские буквы, кириллические буквы, знаки дефиса и пробелы.">
           <span class="popup__error popup__cardName-error"></span>
-          <input class="popup__input" type="url" name="card-link" id="cardLink" placeholder="Ссылка на картинку"  required>
+          <input class="popup__input" type="url" name="card-link" id="cardLink" placeholder="Ссылка на картинку" required>
           <span class="popup__error popup__cardLink-error"></span>
           <button class="popup__button" type="submit" id="submitAddBtn">Создать</button>
         </form>
@@ -69,13 +72,28 @@
       </div>
     </div>
 
+    <div class="popup popup_avatar">
+      <div class="popup__container">
+        <h2 class="popup__title">Обновить аватар</h2>
+        <form class="popup__form popup__form-avatar" name="popup-avatar" novalidate>
+          <input class="popup__input" type="url" name="avatar-link" id="avatarLink" placeholder="Ссылка на картинку" required>
+          <span class="popup__error popup__avatarLink-error"></span>
+          <button class="popup__button" type="submit" disabled>Сохранить</button>
+        </form>
+        <button class="popup__close-button" type="button"></button>
+      </div>
+    </div>
+
     <template id="element-template">
       <article class="element">
-        <img class="element__image" src="" alt="Карачаевск">
+        <img class="element__image" src="" alt="">
         <button class="element__trash-button" type="button"></button>
         <div class="element__item">
-          <h2 class="element__title">Карачаевск</h2>
-          <button class="element__like-button" type="button"></button>
+          <h2 class="element__title"></h2>
+          <div class="element__like-block">
+            <button class="element__like-button" type="button"></button>
+            <p class="element__like-num"></p>
+          </div>
         </div>
       </article>
     </template>

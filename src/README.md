@@ -15,3 +15,4 @@
 * Java Script
 * Валидация инпутов
 * Webpack
+* HTTP API
