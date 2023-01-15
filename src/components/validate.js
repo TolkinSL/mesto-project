@@ -48,12 +48,6 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
   }
 };
 
-//Функция выключения кнопки Submit
-export const disableSubmitBtn = (settings, buttonId) => {
-  buttonId.disabled = true;
-  buttonId.classList.add(settings.inactiveButtonClass);
-};
-
 const setEventListeners = (formElement, settings) => {
   // Находим все поля внутри формы,
   // сделаем из них массив методом Array.from
@@ -61,6 +55,15 @@ const setEventListeners = (formElement, settings) => {
   const buttonElement = formElement.querySelector(settings.submitButtonSelector);
 
   toggleButtonState(inputList, buttonElement, settings);
+
+  //Деактивация кнопки через событие Reset
+  formElement.addEventListener('reset', () => {
+    // `setTimeout` нужен для того, чтобы дождаться очищения формы (вызов уйдет в конце стэка) и только потом вызвать `toggleButtonState`
+    setTimeout(() => {
+      toggleButtonState(inputList, buttonElement, settings);
+    }, 0); // достаточно указать 0 миллисекунд, чтобы после `reset` уже сработало действие
+  });
+
   // Обойдём все элементы полученной коллекции
   inputList.forEach((inputElement) => {
     // каждому полю добавим обработчик события input

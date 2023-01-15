@@ -13,6 +13,8 @@
 * Методология БЭМ
 * Файловая структура Nested
 * Java Script
-* Валидация инпутов
+* Валидация
 * Webpack
 * HTTP API
+
+Ссылка [на проект](https://tolkinsl.github.io/mesto-project/) в Github Pages
